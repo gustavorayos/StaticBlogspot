@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+    <meta charset='utf-8'/>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+    <title>
+		<b:if cond='data:blog.pageType == &quot;index&quot;'>
+			<data:blog.pageTitle/>
+        <b:else/>
+			<b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+				<data:blog.pageName/>
+			<b:else/>
+				404 ERROR - <data:blog.title/> 
+			</b:if>
+		</b:if>
+    </title>
+
+    <meta charset='utf-8'/>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <!--<link href='main.css' media='screen' rel='stylesheet' type='text/css' />-->
+    <!--<script src='main.js' type='text/javascript'></script>-->
+  
+    <!--////////////////////////////-->
+    <!--Always import the following-->
+    <!--///////////////////////////-->
+    <link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' integrity='sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz' rel='stylesheet'/>
+      <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link href='https://www.w3schools.com/w3css/4/w3.css' rel='stylesheet'/>
+    <!--///////////////////////////-->
+    <!--///////////////////////////-->
+    <!--///////////////////////////-->
+  
+    <!--<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Poppins&display=swap" rel="stylesheet"/>-->
+  
+    <link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' rel='stylesheet'/>
+  <script crossorigin='anonymous' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' src='https://code.jquery.com/jquery-3.2.1.slim.min.js'/>
+  <script crossorigin='anonymous' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'/>
+  <script crossorigin='anonymous' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'/>
+  <script src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js'/>
+  
+  </head>
+
+  <b:include data='blog' name='all-head-content'/>
+  <b:skin><![CDATA[  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Poppins&display=swap');
+  body,
+  html {
+      height: 100%;
+      margin: 0;
+      scroll-behavior: smooth;
+  }
+  
+  body,
+  html,
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+  }
+  
+  /******************************************/
+  /*********** Theme Color Begin ************/
+  /******************************************/
+  
+  /* gr-main-color css */
+  .gr-main-color,
+  .gr-hover-main-color:hover {
+      color: #fff!important;
+      background-color: #0b0c10!important;
+  }
+  .gr-text-main-color,
+  .gr-hover-text-main-color:hover {
+      color: #0b0c10!important;
+  }
+
+  /* gr-main-color-2 css */
+  .gr-main-color-2,
+  .gr-hover-main-color-2:hover {
+      color: #fff!important;
+      background-color: #1f2833!important;
+  }
+  .gr-text-main-color-2,
+  .gr-hover-text-main-color-2:hover {
+      color: #1f2833!important;
+  }
+  
+  /* gr-accent-color-button css */
+  .gr-accent-color-button {
+      color: #66fcf1!important;
+      border-color: #66fcf1!important;
+  }
+  .gr-hover-accent-color-button:hover {
+      color: #000!important;
+      background-color: #66fcf1!important;
+  }
+  
+  /* gr-accent-color-button-project css */
+  .gr-accent-color-button-project {
+      color: #0b0c10!important;
+      border-color: #0b0c10!important;
+  }
+  .gr-hover-accent-color-button-project:hover {
+      color: #000!important;
+      background-color: #0b0c10!important;
+  }
+  
+  /* gr-accent-color css */
+  .gr-accent-color,
+  .gr-hover-accent-color:hover {
+      color: #000!important;
+      background-color: #66fcf1!important;
+  }
+  .gr-text-accent-color,
+  .gr-hover-text-accent-color:hover {
+      color: #66fcf1!important;
+  }
+  
+  /* gr-accent-color-shade css */
+  .gr-accent-color-shade,
+  .gr-hover-accent-color-shade:hover {
+      color: #fff!important;
+      background-color: rgba(69,162,158,0.8)!important;
+  }
+  .gr-text-accent-color-shade,
+  .gr-hover-text-accent-color-shade:hover {
+      color: #66fcf1!important;
+  }
+  
+  /* gr-accent-color2 css (text) */
+  .gr-accent-color2,
+  .gr-hover-accent-color2:hover {
+      color: #fff!important;
+      background-color: #c5c6c7!important;
+  }
+  .gr-text-accent-color2,
+  .gr-hover-text-accent-color2:hover {
+      color: #c5c6c7!important;
+  }
+  
+  /* gr-section-divider */
+  .gr-section-divider {
+      border-bottom: 1px solid #fff;
+  }
+
+  /* gr-section-divider */
+  .gr-section-divider2 {
+      border-bottom: 1px solid #fff;
+}
+
+.gr-shade {
+    background-color: rgba(0, 0, 0, .8);
+}
+  
+  /****************************************/
+  /*********** Theme Color End ************/
+  /****************************************/
+  
+  .w3-padding-column {
+      padding: 8px 8px;
+  }
+  
+  .google-maps {
+      position: relative;
+      padding-bottom: 500px;
+      /* This is the aspect*/
+      height: 0;
+      overflow: hidden;
+  }
+  
+  .google-maps iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+  }
+  
+  .bg-project-1 {
+    background-image: url("https://1.bp.blogspot.com/-keQ1GxOcuBA/X3fMrtjl_hI/AAAAAAAAVL0/bN4o-aqHSpQRrHMkXP1vuk5u8IyYX3NzgCLcBGAsYHQ/s2048/1adi-goldstein-EUsVwEOsblE-unsplash%2B%25281%2529.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-2 {
+    background-image: url("https://www.lockheedmartin.com/content/dam/lockheed-martin/eo/photo/homepage/FTT-23_THAAD_04b.jpg.pc-adaptive.full.medium.jpeg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-3 {
+    background-image: url("https://1.bp.blogspot.com/-IgYBe9fcMIM/X4n8KPv-ybI/AAAAAAAAVTM/hMmiB2r7noswuGWDdMC9EO8-aWSake_KACLcBGAsYHQ/s0/stormbreaker-gal3.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-4 {
+    background-image: url("https://1.bp.blogspot.com/-wcNClYCSCFI/X3fMsCp7GuI/AAAAAAAAVL4/cA9FnREZjqQwy6P7EsoLM9yzBXTZebGPQCLcBGAsYHQ/s2048/4jo-van-de-kerkhove-NVi1w27E85w-unsplash.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-5 {
+    background-image: url("https://1.bp.blogspot.com/-RQHCVEtPQuQ/X3fMsF8ghJI/AAAAAAAAVL8/lQR62Ql7xO0VD91uBr3cvRoScrynGVtAACLcBGAsYHQ/s2048/5thomas-jensen-ISG-rUel0Uw-unsplash%2B%25281%2529.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-6 {
+    background-image: url("https://1.bp.blogspot.com/-FVZWe3fpdE0/X3fMsR_t2QI/AAAAAAAAVMA/3Xu-bXKfXswrvyvNwjGawI7H068edHljwCLcBGAsYHQ/s2048/6diego-ph-fIq0tET6llw-unsplash.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-7 {
+    background-image: url("https://1.bp.blogspot.com/-LPP3Rbdruqg/X3fMsz2fbPI/AAAAAAAAVME/5R8G_pRTFKMjGOcbEWHLPVggG9Froy9UACLcBGAsYHQ/s2048/7adam-miller-dBaz0xhCkPY-unsplash.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-8 {
+    background-image: url("https://1.bp.blogspot.com/-KWS_qhcn-J8/X3fMrV4M6aI/AAAAAAAAVLw/11T6MEtdd1EimxwXgUlOuUtNfPz8Ei9XgCLcBGAsYHQ/s2048/3inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-9 {
+    background-image: url("https://1.bp.blogspot.com/-F94oBL_i-qw/X3fMuE-g81I/AAAAAAAAVMM/rSiCf2sf_NAYD0A2xGLvZT_7cHzhpXY6gCLcBGAsYHQ/s2048/9matt-howard-G8hk3cl25ZA-unsplash.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-10 {
+    background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEiAw3z7W3odLf4vyXFpokFVt0vr43LQJ54jsC4T-9sT0aje07-F3KY9N4rmjPJboku1lX0fU-rg0oi1YtFMOIWgg69CtNbvW0zsF7VG5ZST5BLCabumM9iWxIGHLADyLGRbmRaQ2uBRqcpqS6d8O9fXn4YUVVyqeqiZV2Jn1FG99loXqVV4SUIEOFZwEDg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-66 {
+    background-image: url("https://1.bp.blogspot.com/-W_6UJn07-wQ/X3fMraPMrBI/AAAAAAAAVLs/U_5DlImc9y8FZmRrvD0E3GT_TIeUfQQHwCLcBGAsYHQ/s2048/2mike-kenneally-tNALoIZhqVM-unsplash%2B%25281%2529.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-experience-1 {
+    background-image: url("https://1.bp.blogspot.com/-58iZ0-vGZnI/X3i758XVRYI/AAAAAAAAVMw/AI6kY6wvaBINh1pI1Q3w69LelHUhwxBqQCLcBGAsYHQ/s2048/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-404 {
+    background-image: url("https://1.bp.blogspot.com/-aHsvyiGksIA/X4ichXkaonI/AAAAAAAAVRc/bkpOMKwQMEM2VpLk3MTnjeyBiE4ep0lDACLcBGAsYHQ/s0/nasa-Q1p7bh3SHj8-unsplash.jpg");
+    height: 97vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+  #more {display: none;}
+  #more2 {display: none;}
+  #more3 {display: none;}
+  #more4 {display: none;}
+  #more5 {display: none;}
+  #more6 {display: none;}
+  #more7 {display: none;}
+  #more8 {display: none;}
+  #more9 {display: none;}
+  #more10 {display: none;}
+  #more11 {display: none;}
+  #more12 {display: none;}
+  #more13 {display: none;}
+  #more14 {display: none;}
+  #more15 {display: none;}
+  #more16 {display: none;}
+  #more17 {display: none;}
+  #more18 {display: none;}
+  #more66 {display: none;}
+
+  ]]></b:skin>
+
+  <b:if cond='data:blog.url == data:blog.homepageUrl'>
+
+    <nav class='rs-top navbar navbar-expand-lg navbar-dark fixed-top gr-main-color gr-section-divider'>
+      <a class='navbar-brand' href='#'>Gustavo Rayos</a>
+      <!--<a href='/'>
+            <img class='rs-top'
+              src='https://2.bp.blogspot.com/-qtemvtEhf3o/WzWQmrxJK4I/AAAAAAAAMDM/_JjxNx970b0A-vt87lZGORhB2brWtERDQCLcBGAs/s1600/Gustavo_Rayos_Logo%2B2.png'
+              style='width:40px;margin-right:32px;' />
+          </a>-->
+      <button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+        <span class='navbar-toggler-icon gr-text-accent-color'/>
+      </button>
+    
+      <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'>
+            <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='#about'><span class='gr-text-accent-color'>01.</span> About <span class='sr-only'>(current)</span></a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='#experience'><span class='gr-text-accent-color'>02.</span> Experience</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='#projects'><span class='gr-text-accent-color'>03.</span> Projects </a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='#contact'><span class='gr-text-accent-color'>04.</span> Contact</a>
+          </li>
+          <!--<li class="nav-item dropdown">
+                  <a class="nav-link gr-text-accent-color2 gr-hover-text-accent-color dropdown-toggle" href="#work" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class='gr-text-accent-color'>03.</span>  Work
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>-->
+        </ul>
+        <a href='https://gustavorayos.github.io/demo/Gustavo_Rayos_Resume.pdf' target='_blank'>
+          <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button'>Resume</button>
+        </a>
+      </div>
+    </nav>
+
+    <body class='gr-main-color'>
+      <div class='w3-display-container' style='height:100vh;'>
+        <div class='w3-content w3-display-middle' style='width: fit-content;'>
+          <div style='padding:29px 20px;'>
+            <p style='padding-top:32px;'>
+              <span class='gr-text-accent-color'>Hi, my name is </span>
+            </p>
+            <h1 class='w3-hide-small' style='font-size: 50px; font-weight: bold;'>
+              Gustavo Rayos.<br/>
+              <!--<span class='gr-text-accent-color2' style='padding-left:4px;'>I'm an Information Systems Engineer.</span>-->
+            </h1>
+            <h1 class='w3-hide-medium w3-hide-large' style='font-size: 36px; font-weight: bold;'>
+              Gustavo Rayos.<br/>
+              <!--<span class='gr-text-accent-color2' style='padding-left:4px;'>I'm an Information Systems Engineer.</span>-->
+            </h1>
+            <p class='gr-text-accent-color2' style='max-width: 400px;line-height: 1.8;padding:16px 0px;'>
+              Systems Administrator since 2015 residing in San Jose, California. 
+            </p>
+            <!--<div style='padding:4px;'>
+                                </div>-->
+            <div>
+              <a href='https://gustavorayos.github.io/demo/Gustavo_Rayos_Resume.pdf' target='_blank'>
+                <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button'><span style='margin: 0px 72px;'>Resume</span></button>
+              </a>
+              <!--<div style='padding:8px;'>
+                                  </div>
+                                  <a href='#work'>
+                                  <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button'><span style='margin: 0px 72px;'>View work</span></button>
+                                  </a>-->
+              <div style='padding:8px;'>
+              </div>
+            </div>
+            <div class='w3-padding-large'>
+              <span style='font-size:30px;'>
+                <!--<a href='https://www.facebook.com/gooserayos1' target='_blank' style="text-decoration: none;">
+                                      <i class='gr-text-accent-color2 fab fa-facebook gr-hover-text-accent-color'>
+                                      </i>
+                                    </a>-->
+                <!--<a href='https://www.instagram.com/gooserayos/' style='text-decoration: none;' target='_blank'>
+                  <i class='gr-text-accent-color2 fab fa-instagram gr-hover-text-accent-color'>
+                  </i>
+                </a>-->
+                <!--<a href='https://twitter.com/gooserayos' style='text-decoration: none;' target='_blank'>
+                  <i class='gr-text-accent-color2 fab fa-twitter gr-hover-text-accent-color'>
+                  </i>
+                </a>-->
+                <a href='https://github.com/gustavorayos' style='text-decoration: none;' target='_blank'>
+                  <i class='gr-text-accent-color2 fab fa-github gr-hover-text-accent-color'>
+                  </i>
+                </a>
+                <a href='https://www.linkedin.com/in/gustavo-rayos/' style='text-decoration: none;' target='_blank'>
+                  <i class='gr-text-accent-color2 fab fa-linkedin gr-hover-text-accent-color'>
+                  </i>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='gr-section-divider' id='about' style='max-width: 360px;margin:auto;'/>
+                
+      <div class='w3-hide-small' style='padding-bottom:64px; padding-top: 64px;'>
+        <div class='w3-auto w3-padding-medium' style='padding:36px 20px;line-height:1.85;'>
+          <h2 class='w3-center'>
+            <span class='gr-text-accent-color'>01.</span><span style='font-weight: bold;'> About.</span>
+          </h2>
+          <div style='padding-top:48px;'>
+            <a href='https://1.bp.blogspot.com/-BVcf_SByJ54/YC8r4smj1oI/AAAAAAAAWWk/RjRs2w4yNUc4CLPnSUCSBQJVtYI3sD85gCLcBGAsYHQ/s0/IMG_20200414_110128.jpg'>
+              <img alt='Avatar' src='https://1.bp.blogspot.com/-BVcf_SByJ54/YC8r4smj1oI/AAAAAAAAWWk/RjRs2w4yNUc4CLPnSUCSBQJVtYI3sD85gCLcBGAsYHQ/s0/IMG_20200414_110128.jpg' style='padding:20px;width:260px; float:right;'/>
+            </a>
+            <p class='gr-text-accent-color2'>
+              My name is Gustavo Rayos. I&#39;m a System Engineer/Administrator since 2015 and currently reside in San Jose, California. I hold a
+              <a href='https://en.wikipedia.org/wiki/List_of_U.S._security_clearance_terms' style='text-decoration: none;' target='_blank'><span class='gr-text-accent-color'>DoD Secret Security Clearance</span></a> and also a <a href='https://www.comptia.org/certifications/security' style='text-decoration: none;' target='_blank'><span class='gr-text-accent-color'>CompTIA Security+ Certification</span></a>. I have experience in System Administration, Information System Engineering, 
+			  Systems Automation and Deployment, and Cyber Security. 
+            </p>
+            <p class='gr-text-accent-color2'>
+              I perform system configuration,
+              deployment automation, workstation and server patching, vulnerability management, system analysis and provide user support to
+              technical issues while staying friendly and professional.
+              I lead automation efforts of software and system deployments all while keeping best cyber security practices in mind. 
+			  Learning new skills is something I strive for and look forward to and will continue to do so as long as possible.
+            </p>
+            <p class='gr-text-accent-color2' style='margin-bottom: 64px;'>
+              I received my Bachelors Degree in Computer Science from <a href='https://www.nmsu.edu/' style='text-decoration: none;' target='_blank'><span class='gr-text-accent-color'>New Mexico State
+                University</span></a> in 2015 and have used my university studies as a solid foundation to continue learning new skills.
+            </p>
+            <div class='w3-row w3-center w3-auto' style='line-height: 1.85;'>
+              <div class='w3-third'>
+                <h4>
+                  Languages
+                </h4>
+                <p class='gr-text-accent-color2' style='padding-top:32px;font-family: &quot;Crimson Text&quot;, serif;'>
+                  Bash
+                  <br/> Python
+                  <br/> PowerShell
+                  <br/> DOS/Windows
+                  <br/> Java
+                  <br/> JavaScript
+                  <br/> CSS
+                  <br/> HTML
+                  <br/>
+                </p>
+              </div>
+              <div class='w3-third'>
+                <h4>
+                  Technologies
+                </h4>
+                <p class='gr-text-accent-color2' style='padding-top:32px;font-family: &quot;Crimson Text&quot;, serif;'>
+                Linux
+                  <br/> SCAP
+                  <br/> STIGViewer
+                  <br/> VMWare
+                  <br/> Hyper-V
+                  <br/> Ansible
+                  <br/> NIS Server/Client
+                  <br/> Git
+                  <br/>
+                </p>
+              </div>
+              <div class='w3-third'>
+                <h4>
+                  &#160;
+                </h4>
+                <p class='gr-text-accent-color2' style='padding-top:32px;font-family: &quot;Crimson Text&quot;, serif;'>
+                    Active Directory
+                  <br/> Group Policy
+                  <br/> WDS &amp; MDT
+                  <br/> SCCM
+                  <br/> DNS
+                  <br/> DHCP
+                  <br/> Tenable
+                  <br/> MacOS
+                  <br/>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                
+                
+      <div class='w3-hide-medium w3-hide-large' style='padding-bottom:64px; padding-top:64px;'>
+        <div class='w3-center w3-auto w3-padding-medium' style='padding:36px 20px;line-height:1.85;'>
+          <h2 class='w3-center'>
+            <span class='gr-text-accent-color'>01.</span><span style='font-weight: bold;'> About.</span>
+          </h2>
+          <div>
+            <a href='https://1.bp.blogspot.com/-BVcf_SByJ54/YC8r4smj1oI/AAAAAAAAWWk/RjRs2w4yNUc4CLPnSUCSBQJVtYI3sD85gCLcBGAsYHQ/s0/IMG_20200414_110128.jpg'>
+              <img alt='Avatar' src='https://1.bp.blogspot.com/-BVcf_SByJ54/YC8r4smj1oI/AAAAAAAAWWk/RjRs2w4yNUc4CLPnSUCSBQJVtYI3sD85gCLcBGAsYHQ/s0/IMG_20200414_110128.jpg' style='padding:48px 0px;width:260px;'/>
+            </a>
+            <p class='gr-text-accent-color2'>
+                My name is Gustavo Rayos. I&#39;m a System Engineer/Administrator since 2015 and currently reside in San Jose, California. I hold a
+              <a href='https://en.wikipedia.org/wiki/List_of_U.S._security_clearance_terms' style='text-decoration: none;' target='_blank'><span class='gr-text-accent-color'>DoD Secret Security Clearance</span></a> and also a <a href='https://www.comptia.org/certifications/security' style='text-decoration: none;' target='_blank'><span class='gr-text-accent-color'>CompTIA Security+ Certification</span></a>. I have experience in System Administration, Information System Engineering, 
+			  Systems Automation and Deployment, and Cyber Security. 
+            </p>
+            <p class='gr-text-accent-color2'>
+                I perform system configuration,
+              deployment automation, workstation and server patching, vulnerability management, system analysis and provide user support to
+              technical issues while staying friendly and professional.
+              I lead automation efforts of software and system deployments all while keeping best cyber security practices in mind. 
+			  Learning new skills is something I strive for and look forward to and will continue to do so as long as possible.
+            </p>
+            <p class='gr-text-accent-color2' style='margin-bottom: 64px;'>
+              I received my Bachelors Degree in Computer Science from <a href='https://www.nmsu.edu/' style='text-decoration: none;' target='_blank'><span class='gr-text-accent-color'>New Mexico State
+                University</span></a> in 2015 and have used my university studies as a solid foundation to continue learning new skills. 
+            </p>
+            <div class='w3-row w3-center w3-auto' style='line-height: 1.85;'>
+              <div class='w3-third'>
+                <h4>
+                  Languages
+                </h4>
+                <p class='gr-text-accent-color2' style='padding-top:32px;font-family: &quot;Crimson Text&quot;, serif;'>
+                  Bash
+                  <br/> Python
+                  <br/> PowerShell
+                  <br/> DOS/Windows
+                  <br/> Java
+                  <br/> JavaScript
+                  <br/> CSS
+                  <br/> HTML
+                  <br/>
+                </p>
+              </div>
+              <div class='w3-third'>
+                <h4 style='margin-top:32px;'>
+                  Technologies
+                </h4>
+                <p class='gr-text-accent-color2' style='padding-top:32px;font-family: &quot;Crimson Text&quot;, serif;'>
+                Linux
+                  <br/> SCAP
+                  <br/> STIGViewer
+                  <br/> VMWare
+                  <br/> Hyper-V
+                  <br/> Ansible
+                  <br/> NIS Server/Client
+                  <br/> Git
+                  <br/> Active Directory
+                  <br/> Group Policy
+                  <br/> WDS &amp; MDT
+                  <br/> SCCM
+                  <br/> DNS
+                  <br/> DHCP
+                  <br/> Tenable
+                  <br/> MacOS
+                  <br/>
+                </p>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+                       
+      <div class='gr-section-divider' id='experience' style='max-width: 360px;margin:auto;'/>
+                              
+      <div style='padding-bottom:64px; padding-top:64px;'>
+        <div class='w3-auto w3-padding-medium' style='padding:36px 4px;line-height: 1.85;'>
+          <h2 class='w3-center'>
+            <span class='gr-text-accent-color'>02.</span><span style='font-weight: bold;'> Experience.</span>
+          </h2>
+          <div style='padding-top: 48px;line-height: 1.85;'>
+            <div class='w3-container' style='padding:8px;'>
+              <div class='bg-experience-1'>
+                <div class='gr-accent-color-shade'>
+                  <div class='w3-bar'>
+                    <button class='w3-bar-item w3-button tablink gr-hover-accent-color gr-accent-color' onclick='openJob(event,&apos;Lockheed&apos;)' style='padding: 8px 13px;'>Lockheed</button>
+                    <button class='w3-bar-item w3-button tablink gr-hover-accent-color' onclick='openJob(event,&apos;Raytheon&apos;)' style='padding: 8px 13px;'>Raytheon</button>
+                    <button class='w3-bar-item w3-button tablink gr-hover-accent-color' onclick='openJob(event,&apos;Pantex&apos;)' style='padding: 8px 13px;'>Pantex</button>
+                    <!--<button class='w3-bar-item w3-button tablink gr-hover-accent-color' onclick='openJob(event,&apos;Rayos&apos;)' style='padding: 8px 13px;'>Rayos</button>-->
+                    <button class='w3-bar-item w3-button tablink gr-hover-accent-color' onclick='openJob(event,&apos;LANL&apos;)' style='padding: 8px 13px;'>LANL</button>
+                    <!--<button class="w3-bar-item w3-button tablink gr-hover-accent-color" onclick="openJob(event,'DACC')" style='padding: 8px 13px;'>DACC</button>-->
+                  </div>
+                </div>
+              </div>
+              <div class='job' id='Lockheed'>
+                <div class='w3-row gr-main-color-2' style='padding:16px;padding-top: 48px;'>
+                  <div class='w3-quarter'>
+                    <h3>
+                      <span style='font-family: &quot;Nunito&quot;, sans-serif; font-style: italic;'>
+                        Lockheed Martin Space
+                      </span>
+                    </h3>
+                  </div>
+                  <div class='w3-threequarter' style='padding-left: 8px;'>
+                    <div>
+                      <span style='font-weight: bold;font-size: 20px;'>
+                        <span class='gr-text-accent-color'>Senior Information System Analyst</span> | Sunnyvale, CA | November 2020
+                        - March 2023
+                      </span>
+                      <p style='padding-bottom:32px;'>
+                        <br/> &#8226; Designed and developed software to automate our Linux deployments for the Lockheed Martin THAAD Missile program.
+                        <br/> &#8226; Deployed a Tang server to automate the access of LUKs encrypted drives on the network.
+                        <br/> &#8226; Designed and deployed a test environment to test software, systems, and other deployments before production. 
+                        <br/> &#8226; Performed successful root cause analysis for problem resolution in Windows
+                        environments.
+                        <br/> &#8226; Analyzed and assessed server performance, storage capacity and planning for future
+                        needs.
+                        <br/> &#8226; Performed routine server/workstation patching per guidelines.
+                        <br/> &#8226; Performed Cyber-security tasks such as apply system SCANs, STIGs, Controls, Policies,
+                        perform remediation develop POAMs, and support security audits.
+                        <span id='dots17'>...</span> <span id='more17'>
+                          <br/> &#8226; Successfully installed server and associated hardware.
+                          <br/> &#8226; Successfully installed/configured software applications and programs.
+                          <br/> &#8226; Created/edited Standard Operating Instructions (SOI) documentation.
+                          <br/> &#8226; DoD Secret Security Clearance. </span>
+                      </p>
+                      <div class='w3-center' style='padding-bottom: 32px;'>
+                        <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn17' onclick='myFunction17()'><span>Read more</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='job' id='Raytheon' style='display:none'>
+                <div class='w3-row gr-main-color-2' style='padding:16px;padding-top: 48px;'>
+                  <div class='w3-quarter'>
+                    <h3>
+                      <span style='font-family: &quot;Nunito&quot;, sans-serif; font-style: italic;'>
+                        Raytheon Missile Systems
+                      </span>
+                    </h3>
+                  </div>
+                  <div class='w3-threequarter' style='padding-left: 8px;'>
+                    <div>
+                      <span style='font-weight: bold;font-size: 20px;'>
+                        <span class='gr-text-accent-color'>System Engineer</span> | Tucson, AZ | March 2019 - October 2020
+                      </span>
+                      <p style='padding-bottom:32px;'>
+                        <br/> &#8226; Developed software package which automates our standard operating system (OS)
+                        configuration on test equipment (TE).
+                        <br/> &#8226; Deployed a Windows Deployment Server (WDS) and Microsoft Deployment Toolkit (MDT)
+                        server and was responsible for task sequence configuration and client system deployment.
+                        <br/> &#8226; Configured Windows and RHEL operating system to STIG standards.
+                        <br/> &#8226; Worked closely with Cyber Security attending meetings for TE software and hardware configuration.
+                        <span id='dots8'>...</span> <span id='more8'>
+                          <br/> &#8226; Attended Sigma Six discussions providing useful feedback as a member of a project team.
+                          <br/> &#8226; Worked as a member of a system administration team responsible for Test Equipment (TE) computer 
+systems.
+                          <br/> &#8226; Participated in system design, security solutions, system imaging, data recovery, hardware 
+diagnostics, and unique problem solutions in multiple heterogeneous network environments.
+                          <br/> &#8226; Assisted with managing user accounts, network access, generation and maintenance of web-page 
+content, infrastructure, database support, and system backups.
+                          <br/> &#8226; Provided solutions to a variety of technical problems of moderate scope and complexity primarily with 
+internal company contacts.
+                          <br/> &#8226; Contacted inter-organizational and outside customer contacts on routine matters.
+                          <br/> &#8226; Documented procedures for system operations.
+                          <br/> &#8226; Worked under general directions, and followed established procedures to determine and develop approaches to solutions.
+                          <br/> &#8226; Was responsible for program success.
+                          <br/> &#8226; DoD Secret Security Clearance. </span>
+                      </p>
+                      <div class='w3-center' style='padding-bottom: 32px;'>
+                        <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn8' onclick='myFunction8()'><span>Read more</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='job' id='Pantex' style='display:none'>
+                <div class='w3-row gr-main-color-2' style='padding:16px;padding-top: 48px;'>
+                  <div class='w3-quarter'>
+                    <h3>
+                      <span style='font-family: &quot;Nunito&quot;, sans-serif; font-style: italic;'>
+                        CNS Pantex
+      
+                      </span>
+                    </h3>
+                  </div>
+                  <div class='w3-threequarter' style='padding-left: 8px;'>
+                    <div>
+                      <span style='font-weight: bold;font-size: 20px;'>
+                        <span class='gr-text-accent-color'>System Administrator</span> | Amarillo, TX | December 2015 - March
+                        2019
+                      </span>
+                      <p style='padding-bottom:32px;'>
+                        <br/> &#8226; Proactively resolved network vulnerabilities by attending Vulnerability Assessment
+                        Meetings discussing Tenable Network Security scans.
+                        <br/> &#8226; Led IT initiatives to resolve network vulnerabilities, technical issues on servers and
+                        desktops, and consultation of new non-standard hardware on plant site.
+                        <br/> &#8226; Automated tasks using PowerShell scripts, SCCM, and other management tools.
+                        <br/> &#8226; Managed a diskless Citrix XenApp and XenDesktop environment using Citrix Studio and
+                        Citrix Director.
+                        <span id='dots9'>...</span> <span id='more9'>
+                          <br/> &#8226; Managed thin-client environment using Teradici and VMWare Horizon management
+                          consoles.
+                          <br/> &#8226; Managed VPN environment which consisted of Citrix XenApp and XenDesktop servers that
+                          were being hosted, backed-up, and supported using VMWare VCenter.
+                          <br/> &#8226; Configured and managed a Classified Citrix XenApp and XenDesktop environment using
+                          Citrix Provisioning Server (PVS).
+                          <br/> &#8226; Acted as a direct contact for PeopleSoft, Java, Acrobat, Reader, Flash Player, and
+                          deployments.
+                          <br/> &#8226; Acted as a direct contact for any VPN related issues.
+                          <br/> &#8226; Resolved technical service tickets assigned through ServiceNow and Remedy.
+                          <br/> &#8226; DoE Q Top Secret Security Clearance.</span>
+                      </p>
+                      <div class='w3-center' style='padding-bottom: 32px;'>
+                        <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn9' onclick='myFunction9()'><span>Read more</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--
+                      <div class='job' id='Rayos' style='display:none'>
+                          <div class='w3-row gr-main-color-2' style='padding:16px;padding-top: 48px;'>
+                              <div class='w3-quarter'>
+                                  <h3>
+                                      <span style='font-family: &quot;Nunito&quot;, sans-serif; font-style: italic;'>              
+                                          Rayos Design
+                                      </span>
+                                  </h3>
+                              </div>
+                              <div class='w3-threequarter' style='padding-left: 8px;'> 
+                                  <div>
+                                          <span style='font-weight: bold;font-size: 20px;'>
+                                            <span class='gr-text-accent-color'>Web Developer</span> | Amarillo, TX | April 2018 - February 2019
+                                          </span>
+                                          <p style='padding-bottom:32px;'>
+                                          <br/> &#8226; Developed website code using HTML, CSS, JavaScript, jQuery and React languages.
+                                          <br/> &#8226; Configured Apache2, MySQL, PHP, and domain name services on web server. 
+                                          <br/> &#8226; Maintained an organized workflow by using various tools including source control (Git), Visual Studio Code, and other tools.
+                                          <br/> &#8226; Tested and maintained client websites to ensure compatibility with various browsers, operating systems, devices, and screen sizes. 
+                                          <span id='dots10'>...</span> <span id='more10'>
+                                          <br/> &#8226; Hosted websites from personal servers and developed PHP code to provide instructions for user input on websites.
+                                          <br/> &#8226; Designed websites to be user friendly while keeping performance in mind.
+                                          <br/> &#8226; Maintained active conversations with clients to ensure their needs are met. 
+                                          <br/> &#8226; Researched industry trends to provide the most modern and top-quality designs.</span>                               
+                                      </p>
+                                          <div class='w3-center' style='padding-bottom: 32px;'>
+                                              <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn10' onclick='myFunction10()'><span>Read more</span></button>
+                                          </div>
+                                  </div>
+                              </div>
+                          </div> 
+                      </div>
+                      -->
+              <div class='job' id='LANL' style='display:none'>
+                <div class='w3-row gr-main-color-2' style='padding:16px;padding-top: 48px;'>
+                  <div class='w3-quarter'>
+                    <h3>
+                      <span style='font-family: &quot;Nunito&quot;, sans-serif; font-style: italic;'>
+      
+                        Los Alamos National Laboratory
+                      </span>
+                    </h3>
+                  </div>
+                  <div class='w3-threequarter' style='padding-left: 8px;'>
+                    <div>
+                      <span style='font-weight: bold;font-size: 20px;'>
+                        <span class='gr-text-accent-color'>High-Performance Computing Researcher</span> | Los Alamos, NM | May
+                        2015 - August 2015
+                      </span>
+                      <p style='padding-bottom:32px;'>
+                        <br/> &#8226; Researched object storage software called Ceph.
+                        <br/> &#8226; Built a Linux computer cluster of 11 nodes and configured DNS, DHCP, NTP, NFS, HTTP,
+                        Authentication and Authorization, Users and Groups, LDAP, and Kerberos.
+                        <br/> &#8226; Conducted read and write tests on a computer cluster of 11 nodes. Increased performance
+                        of default configuration of Ceph object storage software by 11%.
+                        <br/> &#8226; Contributed work to a team of 3 computer science interns.
+                        <span id='dots11'>...</span> <span id='more11'>
+                          <br/> &#8226; Presented finding to Los Alamos National Laboratory computer scientists.</span>
+                      </p>
+                      <div class='w3-center' style='padding-bottom: 32px;'>
+                        <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn11' onclick='myFunction11()'><span>Read more</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--
+                      <div id="DACC" class="job" style="display:none">
+                          <div class='w3-row gr-main-color-2' style='padding:16px;padding-top: 48px;'>
+                              <div class='w3-quarter'>
+                                  <h3>
+                                      <span style='font-family: "Nunito", sans-serif; font-style: italic;'>
+                                          
+                                          Dona Ana Community College
+                                      </span>
+                                  </h3>
+                              </div>
+                              <div class='w3-threequarter' style='padding-left: 8px;'> 
+                                  <div>
+                                          <span style='font-weight: bold;font-size: 20px;'>
+                                            <span class='gr-text-accent-color'>Computer Support Technician</span> | Las Cruces, NM | August 2014 - January 2015
+                                          </span>
+                                        <p style='padding-bottom:32px;'>
+                                          <br/> &#8226; Provided general field support for faculty, students and other employees. 
+                                          <br/> &#8226; Assisted users by using remote access software to troubleshoot issues they were experiencing.  
+                                          <br/> &#8226; Answered computer related questions from users of university computers.
+                                          <br/> &#8226; Organized software and hardware closets.                              
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  -->
+            </div>
+          </div>
+        </div>
+      </div>
+                
+      <div class='gr-section-divider' id='projects' style='max-width: 360px;margin:auto;'/>
+
+      <div style='padding-bottom:64px; padding-top:64px;'>
+        <div class='w3-auto w3-padding-medium' style='padding:36px 4px;line-height: 1.85;'>
+          <h2 class='w3-center'>
+            <span class='gr-text-accent-color'>03.</span><span style='font-weight: bold;'> Projects.</span>
+          </h2>
+          <div class='w3-row' style='padding-top:48px;'>
+            <div class='w3-third w3-padding-column'>
+              <div class='w3-display-container w3-center'>
+                <div class='bg-project-1'>
+                  <div class='gr-accent-color-shade' style='height:200px;'>
+                    <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                      <h2>SecureSDT</h2>
+                    </div>
+                    <div class='w3-display-bottomright'>
+                      <a href='https://github.com/gustavorayos/SecureSDT' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                        <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='gr-main-color-2'>
+                <p style='padding:16px;'>
+                  <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>The
+                  Secure SDT (Standard Deployment Toolkit) is a Cyber Security tool used to secure
+                  computer systems with STIG configuration and other
+                  <span id='dots'>...</span> <span id='more'> related security protocols. In addition to security settings, it
+                    can also be used to &quot;debloat&quot; Windows 10 Professional versions, create new users, rename the
+                    system, configure folder permissions, and restore a previous Windows Checkpoint.
+                    The tool is written in PowerShell and takes advantage of .NET integration with PowerShell to build a form
+                    used as the GUI.</span>
+                </p>
+                <div class='w3-center' style='padding-bottom: 32px;'>
+                  <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn' onclick='myFunction()'><span>Read more</span></button>
+                </div>
+              </div>
+            </div>
+
+              <div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-10'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>FixerSDS</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://github.com/gustavorayos/FixerSDS' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                  <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>
+                  FixerSDS (Standard Deployment Script) is a System Administration and Cyber Security tool used to harden 
+                  Linux systems to NIST security standards.
+                  <span id='dots18'>...</span> <span id='more18'>It&#39;s written in Bash and also includes other configurations options 
+                  such as SCAP and STIGViewer install, log collection, antivirus install, luks and clevis configuration, etc.</span>
+                </p>
+                <div class='w3-center' style='padding-bottom: 32px;'>
+                  <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn18' onclick='myFunction18()'><span>Read more</span></button>
+                </div>
+                </div>
+              </div>
+
+            <div class='w3-third w3-padding-column'>
+              <div class='w3-display-container w3-center'>
+                <div class='bg-project-3'>
+                  <div class='gr-accent-color-shade' style='height:200px;'>
+                    <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                      <h2>StormBreaker</h2>
+                    </div>
+                    <div class='w3-display-bottomright'>
+                      <a href='https://www.raytheonmissilesanddefense.com/capabilities/products/stormbreaker-smart-weapon' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                        <i class='gr-text-main-color fa fa-desktop gr-hover-text-accent-color2'>
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='gr-main-color-2'>
+                <p style='padding:16px;'>
+                  <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>Worked directly with the 
+                  StormBreaker team to design, develop, and deploy test systems used to test StormBreaker. Provided system 
+                  <span id='dots3'>...</span> <span id='more3'>engineering and administration expertise for the program. The StormBreaker&#174; smart weapon gives operators an upper hand 
+                  in combat by hitting moving targets in some of the worst weather conditions. The winged munition autonomously 
+                  detects and classifies moving targets in poor visibility situations caused by darkness, bad weather, smoke 
+                  or dust kicked up by helicopters.</span>
+                </p>
+                <div class='w3-center' style='padding-bottom: 32px;'>
+                  <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn3' onclick='myFunction3()'><span>Read more</span></button>
+                </div>
+              </div>
+            </div> 
+          </div>
+      
+          <span id='dots7'/><span id='more7'>
+            <div class='w3-row'>
+
+            <div class='w3-third w3-padding-column'>
+              <div class='w3-display-container w3-center'>
+                <div class='bg-project-2'>
+                  <div class='gr-accent-color-shade' style='height:200px;'>
+                    <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                      <h2>THAAD</h2>
+                    </div>
+                    <div class='w3-display-bottomright'>
+                      <a href='https://www.lockheedmartin.com/en-us/products/thaad.html' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                        <i class='gr-text-main-color fa fa-desktop gr-hover-text-accent-color2'>
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='gr-main-color-2'>
+                <p style='padding:16px;'>
+                  <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>Administered, deployed, and 
+                  maintained computer systems for the THAAD program. Developed and implemented Cyber Security 
+                  <span id='dots2'>...</span> <span id='more2'> methods and ideologies. THAAD defends against short, medium, 
+                  and intermediate-range ballistic missiles. It provides a unique endo-and exo-ballistic defense capability 
+                  and was specifically designed to provide a robust capability against mass raid.  </span>
+                </p>
+                <div class='w3-center' style='padding-bottom: 32px;'>
+                  <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn2' onclick='myFunction2()'><span>Read more</span></button>
+                </div>
+              </div>
+            </div>
+
+              <div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-5'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>HomeLab</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                    <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>My
+                    homelab was created to be able to learn how to install, configure
+                    and troubleshoot software used in production environments.
+                    <span id='dots5'>...</span> <span id='more5'>to build a test cluster of
+                      It is composed of a server running VMware ESXi that is hosting virtual servers. These servers include
+                      vCenter, Domain Controller,
+                      VMware Horizon, Citrix XenDesktop, Linux Servers, NAS, and more. On the networking side, a MicroTik Hex
+                      Router is used to create seperate
+                      VLANs enabling a security and controlled boundary between my homelab and home network.
+                    </span>
+                  </p>
+                  <div class='w3-center' style='padding-bottom: 32px;'>
+                    <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn5' onclick='myFunction5()'><span>Read more</span></button>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-66'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>NoSleep</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://github.com/gustavorayos/NoSleep' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                <p style='padding:16px;'>
+                  <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>Simply
+                  launch the NoSleep.exe, enter the time you want it to prevent the system
+                  from going to sleep, then press enter. You can also
+                  <span id='dots66'>...</span> <span id='more66'> select NoSleep to run indefinately until the system is
+                    shutdown or rebooted.
+                    The tool is written in PowerShell and is converted to a .exe file using PS2EXE.</span>
+                </p>
+                <div class='w3-center' style='padding-bottom: 32px;'>
+                  <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn66' onclick='myFunction66()'><span>Read more</span></button>
+                </div>
+              </div>
+            
+              <!--<div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-6'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>Samantha Rayos</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://www.samanthaorayos.com/' style='text-decoration: none;font-size:36px;padding-left:16px;' target='_blank'>
+                          <i class='gr-text-main-color fa fa-desktop gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                        <a href='https://github.com/gustavorayos/samantharayosdotcom' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                    <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>I
+                    designed and created a portfolio website for Samantha Rayos. She
+                    has a career in Marketing was finishing up her Business
+                    <span id='dots6'>...</span> <span id='more6'>
+                      Marketing degree at West Texas A&amp;M University. The website uses many elements to showcase her
+                      accomplishments and the majority of the website was done using HTML, CSS, and some JavaScript.</span>
+                  </p>
+                  <div class='w3-center' style='padding-bottom: 32px;'>
+                    <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn6' onclick='myFunction6()'><span>Read more</span></button>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+            <div class='w3-row'>
+              <div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-7'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>Blog</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://blog.gustavorayos.com/' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fa fa-desktop gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                    <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>The
+                    Gustavo Rayos Blog is a blog about Information Technology. It
+                    features articles, news, and tutorials focusing on various
+                    <span id='dots14'>...</span> <span id='more14'>areas of information technology. Sections covered include
+                      System Administration, Security, Development, HPC, and more.</span>
+                  </p>
+                  <div class='w3-center' style='padding-bottom: 32px;'>
+                    <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn14' onclick='myFunction14()'><span>Read more</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-8'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>Senior Thesis - Ceph</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://github.com/gustavorayos/Senior-Project---Ceph' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                  <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>Senior
+                  Thesis completed at New Mexico State University in Fall 2015.
+                  Together with my adviser, we worked with Los Alamos National Laboratory
+                  <span id='dots15'>...</span> <span id='more15'>to build a test cluster of
+                    11 nodes then commenced testing of Ceph Object Store software remotely from Las Cruces, NM.
+                    The work was done over a period of 4 months. At the end of the semester, a written paper was
+                    presented.</span>
+                </p>
+                <div class='w3-center' style='padding-bottom: 32px;'>
+                  <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn15' onclick='myFunction15()'><span>Read more</span></button>
+                </div>
+                </div>
+              </div>
+
+              <div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-4'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>CSCNSI at LANL</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://github.com/gustavorayos/CSCNSI---Ceph-Object-Storage' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                    <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>In
+                    the Summer of 2015, I was part of an internship at Los Alamos
+                    National Laboratory. I worked on a team of 3 Computer Science
+                    <span id='dots4'>...</span> <span id='more4'>students to research an object storage software called Ceph.
+                      Ceph is a software created by Red Hat Inc. and is used in super computers to store large amounts of
+                      data. Our goal was to test and improve the writing and reading efficiency of the data on the Ceph Object
+                      Storage software. At the end of our internship, we presented our findings to Computer Scientists and
+                      entered our work into the annual ACM/IEEE Supercomputing Conference.
+                      To view the final presentation files and work files used for the project, click on the link
+                      below.</span>
+                  </p>
+                  <div class='w3-center' style='padding-bottom: 32px;'>
+                    <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn4' onclick='myFunction4()'><span>Read more</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+              <div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-9'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>Future Projects</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://github.com/gustavorayos' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                    <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>as a
+                    Systems Administrator, Systems Engineer, Computer
+                    Systems Engineer, or similar position. I am constantly learning new
+                    <span id='dots16'>...</span> <span id='more16'>skills that are going to help me on my journey to be the
+                      best Information Systems Engineer that I can be.
+                      New technologies are coming out that constantly need to be learned and used by professionals.
+                      I will work hard where I end up, and will represent myself and the company the best way possible.</span>
+                  </p>
+                  <div class='w3-center' style='padding-bottom: 32px;'>
+                    <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn16' onclick='myFunction16()'><span>Read more</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+              <!--<div class='w3-third w3-padding-column'>
+                <div class='w3-display-container w3-center'>
+                  <div class='bg-project-9'>
+                    <div class='gr-accent-color-shade' style='height:200px;'>
+                      <div class='w3-text-white w3-display-middle' style='width:90%;'>
+                        <h2>Future Projects</h2>
+                      </div>
+                      <div class='w3-display-bottomright'>
+                        <a href='https://github.com/gustavorayos' style='text-decoration: none;font-size:36px;padding:0px 16px;' target='_blank'>
+                          <i class='gr-text-main-color fab fa-github gr-hover-text-accent-color2'>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='gr-main-color-2'>
+                  <p style='padding:16px;'>
+                    <span style='font-weight: bold; font-style: italic;'>Summary:</span><span style='padding-left:8px'/>as a
+                    Systems Administrator, Systems Engineer, Computer
+                    Systems Engineer, or similar position. I am constantly learning new
+                    <span id='dots16'>...</span> <span id='more16'>skills that are going to help me on my journey to be the
+                      best Computer Systems Engineer that I can be.
+                      New technologies are coming out that constantly need to be learned and used by professionals.
+                      I will work hard where I end up, and will represent myself and the company the best way possible.</span>
+                  </p>
+                  <div class='w3-center' style='padding-bottom: 32px;'>
+                    <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn16' onclick='myFunction16()'><span>Read more</span></button>
+                  </div>
+                </div>
+              </div>-->
+            
+
+          </span>
+          <div class='w3-center' style='margin:48px 0px;'>
+            <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn7' onclick='myFunction7()'>View all work</button>
+          </div>
+        </div>
+      </div>
+
+      <div class='gr-section-divider' id='contact' style='max-width: 360px;margin:auto;'/>
+                
+      <div style='padding-bottom:64px; padding-top:64px;'>
+        <div class='w3-auto w3-padding-medium' style='padding:36px 4px;line-height: 1.85;'>
+          <h2 class='w3-center'>
+            <span class='gr-text-accent-color'>04.</span><span style='font-weight: bold;'> Contact.</span>
+          </h2>
+          <div class='w3-center' style='padding-top:48px;padding-left:16px;padding-right:16px;max-width: 700px;margin-left: auto; margin:auto;'>
+            <p class='gr-text-accent-color2'>
+              I&#39;m currently living and working out of <span class='gr-text-accent-color'>San Jose, California</span>. If you have any
+              questions, feel free to send me a message or email. I will try my best
+              to get back to you as soon as possible.
+            </p>
+          </div>
+          <span id='dots13'/><span id='more13'>
+            <div style='padding-top:42px;padding-bottom: 0px;'>
+              <div class='w3-row w3-content w3-center w3-padding-large'>
+                <div class='w3-third w3-padding-large'>
+                  <a href='' style='text-decoration: none;'>
+                    <i class='gr-text-accent-color2 gr-hover-text-accent-color fa fa-phone' style='font-size: 50px;'>
+                    </i>
+                    <br/>
+                    <br/>
+                    <span class='gr-text-accent-color2 gr-hover-text-accent-color' style='font-size: 18px'>575-520-5199</span>
+                  </a>
+                </div>
+                <div class='w3-third w3-center w3-padding-large'>
+                  <a href='' style='text-decoration: none;'>
+                    <i class='gr-text-accent-color2 gr-hover-text-accent-color fa fa-envelope' style='font-size: 50px;'>
+                    </i>
+                    <br/>
+                    <br/>
+                    <span class='gr-text-accent-color2 gr-hover-text-accent-color' style='font-size: 18px'>gustavorayos
+                      <br/>@outlook.com</span>
+                  </a>
+                </div>
+                <!--<div class='w3-quarter w3-padding-large'>
+                                                      <a href='https://github.com/gustavorayos' style='text-decoration: none;' target='_blank'>
+                                                          <i class='gr-text-accent-color2 gr-hover-text-accent-color fa fa-github' style='font-size: 50px;'>
+                                                          </i>
+                                                      <br/>
+                                                      <br/>
+                                                      <span class='gr-text-accent-color2 gr-hover-text-accent-color' style='font-size: 18px'>@gustavorayos</span>
+                                                      </a>
+                                                  </div>-->
+                <div class='w3-third w3-padding-large'>
+                  <a href='https://www.linkedin.com/in/gustavo-rayos/' style='text-decoration: none;' target='_blank'>
+                    <i class='gr-text-accent-color2 gr-hover-text-accent-color fa fa-linkedin' style='font-size: 50px;'>
+                    </i>
+                    <br/>
+                    <br/>
+                    <span class='gr-text-accent-color2 gr-hover-text-accent-color' style='font-size: 18px'>@gustavo-rayos</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+          </span>
+      
+          <div class='w3-center' style='margin:48px 0px;'>
+            <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button' id='myBtn13' onclick='myFunction13()'>View contact info</button>
+          </div>
+          <div class='google-maps' id='contact' style='margin:0px 8px;'>
+            <iframe allowfullscreen='true' frameborder='0' height='600' src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d286245.0592356813!2d-122.20254780177166!3d37.56606744246317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1593720093753!5m2!1sen!2sus' style='border:0;padding-top:16px;' width='600'/>
+          </div>
+        </div>
+      </div>
+                
+      <div class='gr-section-divider' style='max-width: 360px;margin:auto;'/>
+                
+      <div class='w3-center w3-padding-large'>
+        <span style='font-size:30px;'>
+          <!--<a href='https://www.facebook.com/gooserayos1' target='_blank' style="text-decoration: none;">
+                                                  <i class='gr-text-accent-color2 fab fa-facebook gr-hover-text-accent-color'>
+                                                  </i>
+                                                </a>-->
+          <!--<a href='https://www.instagram.com/gooserayos/' style='text-decoration: none;' target='_blank'>
+            <i class='gr-text-accent-color2 fab fa-instagram gr-hover-text-accent-color'>
+            </i>
+          </a>-->
+          <!--<a href='https://twitter.com/gooserayos' style='text-decoration: none;' target='_blank'>
+            <i class='gr-text-accent-color2 fab fa-twitter gr-hover-text-accent-color'>
+            </i>
+          </a>-->
+          <a href='https://github.com/gustavorayos' style='text-decoration: none;' target='_blank'>
+            <i class='gr-text-accent-color2 fab fa-github gr-hover-text-accent-color'>
+            </i>
+          </a>
+          <a href='https://www.linkedin.com/in/gustavo-rayos/' style='text-decoration: none;' target='_blank'>
+            <i class='gr-text-accent-color2 fab fa-linkedin gr-hover-text-accent-color'>
+            </i>
+          </a>
+        </span>
+        <p>Created by
+          <a class='gr-hover-text-accent-color2 gr-text-accent-color' href='https://www.gustavorayos.com/' style='text-decoration: none;' target='_blank'>Gustavo Rayos</a>
+        </p>
+      </div>                    
+  </body>
+</b:if>
+
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+
+  <nav class='rs-top navbar navbar-expand-lg navbar-dark fixed-top gr-main-color gr-section-divider'>
+    <a class='navbar-brand' href='https://www.gustavorayos.com/#'>Gustavo Rayos</a>
+    <!--<a href='/'>
+          <img class='rs-top'
+            src='https://2.bp.blogspot.com/-qtemvtEhf3o/WzWQmrxJK4I/AAAAAAAAMDM/_JjxNx970b0A-vt87lZGORhB2brWtERDQCLcBGAs/s1600/Gustavo_Rayos_Logo%2B2.png'
+            style='width:40px;margin-right:32px;' />
+        </a>-->
+    <button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+      <span class='navbar-toggler-icon gr-text-accent-color'/>
+    </button>
+  
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav mr-auto'>
+        <li class='nav-item active'>
+          <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='https://www.gustavorayos.com/#about'><span class='gr-text-accent-color'>01.</span> About <span class='sr-only'>(current)</span></a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='https://www.gustavorayos.com/#experience'><span class='gr-text-accent-color'>02.</span> Experience</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='https://www.gustavorayos.com/#work'><span class='gr-text-accent-color'>03.</span> Work</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link gr-text-accent-color2 gr-hover-text-accent-color' href='https://www.gustavorayos.com/#contact'><span class='gr-text-accent-color'>04.</span> Contact</a>
+        </li>
+        <!--<li class="nav-item dropdown">
+                <a class="nav-link gr-text-accent-color2 gr-hover-text-accent-color dropdown-toggle" href="#work" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class='gr-text-accent-color'>03.</span>  Work
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>-->
+      </ul>
+      <a href='https://gustavorayos.github.io/demo/Gustavo_Rayos_Resume.pdf' target='_blank'>
+        <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button'>Resume</button>
+      </a>
+    </div>
+  </nav>
+
+  <body class='gr-main-color'>
+    <div class='header-404'>
+      <div class='w3-content w3-display-middle gr-shade' style='width: fit-content;'>
+        <div style='padding:29px 20px;'>
+          <p>
+            <span class='gr-text-accent-color'>404 Error </span>
+          </p>
+          <h1 class='w3-hide-small' style='font-size: 52px; font-weight: bold;'>
+            Oops<br/>
+            <span class='gr-text-accent-color2' style='padding-left:4px;'>Something went wrong.</span>
+          </h1>
+          <h1 class='w3-hide-medium w3-hide-large' style='font-size: 38px; font-weight: bold;'>
+            Oops<br/>
+            <span class='gr-text-accent-color2' style='padding-left:4px;'>Something went wrong.</span>
+          </h1>
+          <div>
+            <div style='padding:8px;'>
+            </div>
+            <a href='https://www.gustavorayos.com/#'>
+              <button class='btn btn-outline-success my-2 my-sm-0 gr-accent-color-button gr-hover-accent-color-button'><span style='margin: 0px 72px;'>Home</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</b:if>
+
+<script>
+  window.sr = ScrollReveal();
+    sr.reveal(&#39;.rs-top&#39;, {
+    duration: 1800,
+    origin: &#39;top&#39;,
+    distance: &#39;80px&#39;,
+  });
+  sr.reveal(&#39;.rs-left&#39;, {
+    duration: 1800,
+    origin: &#39;left&#39;,
+    distance: &#39;30px&#39;,
+  });
+  sr.reveal(&#39;.rs-bottom&#39;, {
+    duration: 1800,
+    origin: &#39;bottom&#39;,
+    distance: &#39;50px&#39;,
+  });
+</script>
+<script>
+function myFunction() {
+  var dots = document.getElementById(&quot;dots&quot;);
+  var moreText = document.getElementById(&quot;more&quot;);
+  var btnText = document.getElementById(&quot;myBtn&quot;);
+
+  if (dots.style.display === &quot;none&quot;) {
+    dots.style.display = &quot;inline&quot;;
+    btnText.innerHTML = &quot;Read more&quot;; 
+    moreText.style.display = &quot;none&quot;;
+  } else {
+    dots.style.display = &quot;none&quot;;
+    btnText.innerHTML = &quot;Read less&quot;; 
+    moreText.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction2() {
+  var dots2 = document.getElementById(&quot;dots2&quot;);
+  var moreText2 = document.getElementById(&quot;more2&quot;);
+  var btnText2 = document.getElementById(&quot;myBtn2&quot;);
+
+  if (dots2.style.display === &quot;none&quot;) {
+    dots2.style.display = &quot;inline&quot;;
+    btnText2.innerHTML = &quot;Read more&quot;; 
+    moreText2.style.display = &quot;none&quot;;
+  } else {
+    dots2.style.display = &quot;none&quot;;
+    btnText2.innerHTML = &quot;Read less&quot;; 
+    moreText2.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction3() {
+  var dots3 = document.getElementById(&quot;dots3&quot;);
+  var moreText3 = document.getElementById(&quot;more3&quot;);
+  var btnText3 = document.getElementById(&quot;myBtn3&quot;);
+
+  if (dots3.style.display === &quot;none&quot;) {
+    dots3.style.display = &quot;inline&quot;;
+    btnText3.innerHTML = &quot;Read more&quot;; 
+    moreText3.style.display = &quot;none&quot;;
+  } else {
+    dots3.style.display = &quot;none&quot;;
+    btnText3.innerHTML = &quot;Read less&quot;; 
+    moreText3.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction4() {
+  var dots4 = document.getElementById(&quot;dots4&quot;);
+  var moreText4 = document.getElementById(&quot;more4&quot;);
+  var btnText4 = document.getElementById(&quot;myBtn4&quot;);
+
+  if (dots4.style.display === &quot;none&quot;) {
+    dots4.style.display = &quot;inline&quot;;
+    btnText4.innerHTML = &quot;Read more&quot;; 
+    moreText4.style.display = &quot;none&quot;;
+  } else {
+    dots4.style.display = &quot;none&quot;;
+    btnText4.innerHTML = &quot;Read less&quot;; 
+    moreText4.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction5() {
+  var dots5 = document.getElementById(&quot;dots5&quot;);
+  var moreText5 = document.getElementById(&quot;more5&quot;);
+  var btnText5 = document.getElementById(&quot;myBtn5&quot;);
+
+  if (dots5.style.display === &quot;none&quot;) {
+    dots5.style.display = &quot;inline&quot;;
+    btnText5.innerHTML = &quot;Read more&quot;; 
+    moreText5.style.display = &quot;none&quot;;
+  } else {
+    dots5.style.display = &quot;none&quot;;
+    btnText5.innerHTML = &quot;Read less&quot;; 
+    moreText5.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction6() {
+  var dots6 = document.getElementById(&quot;dots6&quot;);
+  var moreText6 = document.getElementById(&quot;more6&quot;);
+  var btnText6 = document.getElementById(&quot;myBtn6&quot;);
+
+  if (dots6.style.display === &quot;none&quot;) {
+    dots6.style.display = &quot;inline&quot;;
+    btnText6.innerHTML = &quot;Read more&quot;; 
+    moreText6.style.display = &quot;none&quot;;
+  } else {
+    dots6.style.display = &quot;none&quot;;
+    btnText6.innerHTML = &quot;Read less&quot;; 
+    moreText6.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction7() {
+  var dots7 = document.getElementById(&quot;dots7&quot;);
+  var moreText7 = document.getElementById(&quot;more7&quot;);
+  var btnText7 = document.getElementById(&quot;myBtn7&quot;);
+
+  if (dots7.style.display === &quot;none&quot;) {
+    dots7.style.display = &quot;inline&quot;;
+    btnText7.innerHTML = &quot;View all work&quot;; 
+    moreText7.style.display = &quot;none&quot;;
+  } else {
+    dots7.style.display = &quot;none&quot;;
+    btnText7.innerHTML = &quot;View less work&quot;; 
+    moreText7.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction8() {
+  var dots8 = document.getElementById(&quot;dots8&quot;);
+  var moreText8 = document.getElementById(&quot;more8&quot;);
+  var btnText8 = document.getElementById(&quot;myBtn8&quot;);
+
+  if (dots8.style.display === &quot;none&quot;) {
+    dots8.style.display = &quot;inline&quot;;
+    btnText8.innerHTML = &quot;Read more&quot;; 
+    moreText8.style.display = &quot;none&quot;;
+  } else {
+    dots8.style.display = &quot;none&quot;;
+    btnText8.innerHTML = &quot;Read less&quot;; 
+    moreText8.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction9() {
+  var dots9 = document.getElementById(&quot;dots9&quot;);
+  var moreText9 = document.getElementById(&quot;more9&quot;);
+  var btnText9 = document.getElementById(&quot;myBtn9&quot;);
+
+  if (dots9.style.display === &quot;none&quot;) {
+    dots9.style.display = &quot;inline&quot;;
+    btnText9.innerHTML = &quot;Read more&quot;; 
+    moreText9.style.display = &quot;none&quot;;
+  } else {
+    dots9.style.display = &quot;none&quot;;
+    btnText9.innerHTML = &quot;Read less&quot;; 
+    moreText9.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction10() {
+  var dots10 = document.getElementById(&quot;dots10&quot;);
+  var moreText10 = document.getElementById(&quot;more10&quot;);
+  var btnText10 = document.getElementById(&quot;myBtn10&quot;);
+
+  if (dots10.style.display === &quot;none&quot;) {
+    dots10.style.display = &quot;inline&quot;;
+    btnText10.innerHTML = &quot;Read more&quot;; 
+    moreText10.style.display = &quot;none&quot;;
+  } else {
+    dots10.style.display = &quot;none&quot;;
+    btnText10.innerHTML = &quot;Read less&quot;; 
+    moreText10.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction11() {
+  var dots11 = document.getElementById(&quot;dots11&quot;);
+  var moreText11 = document.getElementById(&quot;more11&quot;);
+  var btnText11 = document.getElementById(&quot;myBtn11&quot;);
+
+  if (dots11.style.display === &quot;none&quot;) {
+    dots11.style.display = &quot;inline&quot;;
+    btnText11.innerHTML = &quot;Read more&quot;; 
+    moreText11.style.display = &quot;none&quot;;
+  } else {
+    dots11.style.display = &quot;none&quot;;
+    btnText11.innerHTML = &quot;Read less&quot;; 
+    moreText11.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction12() {
+  var dots12 = document.getElementById(&quot;dots12&quot;);
+  var moreText12 = document.getElementById(&quot;more12&quot;);
+  var btnText12 = document.getElementById(&quot;myBtn12&quot;);
+
+  if (dots12.style.display === &quot;none&quot;) {
+    dots12.style.display = &quot;inline&quot;;
+    btnText12.innerHTML = &quot;View all experience&quot;; 
+    moreText12.style.display = &quot;none&quot;;
+  } else {
+    dots12.style.display = &quot;none&quot;;
+    btnText12.innerHTML = &quot;View less experience&quot;; 
+    moreText12.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction13() {
+  var dots13 = document.getElementById(&quot;dots13&quot;);
+  var moreText13 = document.getElementById(&quot;more13&quot;);
+  var btnText13 = document.getElementById(&quot;myBtn13&quot;);
+
+  if (dots13.style.display === &quot;none&quot;) {
+    dots13.style.display = &quot;inline&quot;;
+    btnText13.innerHTML = &quot;View contact info&quot;; 
+    moreText13.style.display = &quot;none&quot;;
+  } else {
+    dots13.style.display = &quot;none&quot;;
+    btnText13.innerHTML = &quot;Hide contact info&quot;; 
+    moreText13.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction14() {
+  var dots14 = document.getElementById(&quot;dots14&quot;);
+  var moreText14 = document.getElementById(&quot;more14&quot;);
+  var btnText14 = document.getElementById(&quot;myBtn14&quot;);
+
+  if (dots14.style.display === &quot;none&quot;) {
+    dots14.style.display = &quot;inline&quot;;
+    btnText14.innerHTML = &quot;Read more&quot;; 
+    moreText14.style.display = &quot;none&quot;;
+  } else {
+    dots14.style.display = &quot;none&quot;;
+    btnText14.innerHTML = &quot;Read less&quot;; 
+    moreText14.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction15() {
+  var dots15 = document.getElementById(&quot;dots15&quot;);
+  var moreText15 = document.getElementById(&quot;more15&quot;);
+  var btnText15 = document.getElementById(&quot;myBtn15&quot;);
+
+  if (dots15.style.display === &quot;none&quot;) {
+    dots15.style.display = &quot;inline&quot;;
+    btnText15.innerHTML = &quot;Read more&quot;; 
+    moreText15.style.display = &quot;none&quot;;
+  } else {
+    dots15.style.display = &quot;none&quot;;
+    btnText15.innerHTML = &quot;Read less&quot;; 
+    moreText15.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction16() {
+  var dots16 = document.getElementById(&quot;dots16&quot;);
+  var moreText16 = document.getElementById(&quot;more16&quot;);
+  var btnText16 = document.getElementById(&quot;myBtn16&quot;);
+
+  if (dots16.style.display === &quot;none&quot;) {
+    dots16.style.display = &quot;inline&quot;;
+    btnText16.innerHTML = &quot;Read more&quot;; 
+    moreText16.style.display = &quot;none&quot;;
+  } else {
+    dots16.style.display = &quot;none&quot;;
+    btnText16.innerHTML = &quot;Read less&quot;; 
+    moreText16.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction17() {
+  var dots17 = document.getElementById(&quot;dots17&quot;);
+  var moreText17 = document.getElementById(&quot;more17&quot;);
+  var btnText17 = document.getElementById(&quot;myBtn17&quot;);
+
+  if (dots17.style.display === &quot;none&quot;) {
+    dots17.style.display = &quot;inline&quot;;
+    btnText17.innerHTML = &quot;Read more&quot;; 
+    moreText17.style.display = &quot;none&quot;;
+  } else {
+    dots17.style.display = &quot;none&quot;;
+    btnText17.innerHTML = &quot;Read less&quot;; 
+    moreText17.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction18() {
+  var dots18 = document.getElementById(&quot;dots18&quot;);
+  var moreText18 = document.getElementById(&quot;more18&quot;);
+  var btnText18 = document.getElementById(&quot;myBtn18&quot;);
+
+  if (dots18.style.display === &quot;none&quot;) {
+    dots18.style.display = &quot;inline&quot;;
+    btnText18.innerHTML = &quot;Read more&quot;; 
+    moreText18.style.display = &quot;none&quot;;
+  } else {
+    dots18.style.display = &quot;none&quot;;
+    btnText18.innerHTML = &quot;Read less&quot;; 
+    moreText18.style.display = &quot;inline&quot;;
+  }
+}
+
+function myFunction66() {
+  var dots66 = document.getElementById(&quot;dots66&quot;);
+  var moreText66 = document.getElementById(&quot;more66&quot;);
+  var btnText66 = document.getElementById(&quot;myBtn66&quot;);
+
+  if (dots66.style.display === &quot;none&quot;) {
+    dots66.style.display = &quot;inline&quot;;
+    btnText66.innerHTML = &quot;Read more&quot;; 
+    moreText66.style.display = &quot;none&quot;;
+  } else {
+    dots66.style.display = &quot;none&quot;;
+    btnText66.innerHTML = &quot;Read less&quot;; 
+    moreText66.style.display = &quot;inline&quot;;
+  }
+}
+
+function openJob(evt, jobName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName(&quot;job&quot;);
+  for (i = 0; i &lt; x.length; i++) {
+    x[i].style.display = &quot;none&quot;;
+  }
+  tablinks = document.getElementsByClassName(&quot;tablink&quot;);
+  for (i = 0; i &lt; x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(&quot; gr-accent-color&quot;, &quot;&quot;);
+  }
+  document.getElementById(jobName).style.display = &quot;block&quot;;
+  evt.currentTarget.className += &quot; gr-accent-color&quot;;
+}
+</script>
+
+<script>
+  $(&#39;.navbar-collapse a&#39;).click(function(){
+    $(&quot;.navbar-collapse&quot;).collapse(&#39;hide&#39;);
+  });
+</script>
+
+      <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'/>
+
+      </html>
